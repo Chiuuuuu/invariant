@@ -59,7 +59,7 @@ def load_images():
                 ct += 1
         except IOError:
             break
-    print (ct, 'pics')
+    print(ct, 'pics')
 
     dat.close()
     cat.close()
