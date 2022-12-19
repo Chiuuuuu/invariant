@@ -14,6 +14,6 @@ f = function([], T.exp(x))
 t0 = time.time()
 for i in xrange(iters):
     r = f()
-print 'Looping %d times took'%iters, time.time() - t0, 'seconds'
-print 'Result is', r
-print 'Used the','cpu' if numpy.any( [isinstance(x.op,T.Elemwise) for x in f.maker.env.toposort()]) else 'gpu'
+print('Looping %d times took'%iters, time.time() - t0, 'seconds')
+print('Result is', r)
+print('Used the','cpu' if numpy.any( [isinstance(x.op,T.Elemwise) for x in f.maker.env.toposort()]) else 'gpu')
